@@ -1,12 +1,11 @@
 #!/usr/bin/perl
-@input=<STDIN>;
+@input = <STDIN>;
+print @input;
 foreach $line(@input){
+	print index($line,$ARGV[0]);
+	print $line;
 	if(index($line,$ARGV[0])!=-1){
 		print $line;
-	}
-	else{
-		print "No search Found \n";
-		exit 0;
 	}
 }
 
